@@ -1,6 +1,8 @@
 # EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-
-
-
+# NAME:HEMANATHAN.T
+# REG NO:212221220019
+# DEPARTMENT:INFORMATION TECHNOLOGY
+# DATE : 23/02/24
 
 
 **AIM**:  To interface a Analog  input (angular displacement sensor POT) and scale the values up on change in the input.
@@ -67,42 +69,46 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM: 
-```
-
-int potPin= A5;
-int ledPin= 2;
-
+int pot;
+int led=7;
 void setup()
 {
- pinMode (potPin, INPUT);
- pinMode(ledPin, OUTPUT);
- Serial.begin(9600);
- 
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop()
 {
-int potMesure = analogRead(A5);
- Serial.print("Sensor Value: ");
- Serial.println(potMesure);
- if (potMesure>=650)
- {
-   digitalWrite(2, HIGH);
- }
- else
-   digitalWrite(2, LOW);
- 
- 
+  pot=analogRead(A0);
+  //Serial.print("Value=");
+  Serial.println(pot);
+  if(pot>900){
+    digitalWrite(led, HIGH);
+    delay(500); // Wait for 500 millisecond(s)
+    digitalWrite(led, LOW);
+    delay(500); // Wait for 500 millisecond(s)
+  }
+  else{
+    
+    digitalWrite(led, LOW);
+    delay(500); // Wait for 500 millisecond(s)
+  }
+    
+  
+  
 }
 
+![Screenshot 2024-02-23 161447](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/b3ee9e53-81c7-4b66-9b18-00166648ce2d)
 
 
 ```
 
 ### Simulation output:
-![out 1](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/86ee3400-aefe-4415-b2ca-e134e3eb1a13)
+![Screenshot 2024-02-23 161201](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/c3ca36ce-c148-4398-a403-b20e329c40e9)
+![Screenshot 2024-02-23 161217](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/425ddc87-ea58-48f3-9986-7d5ecf4dd3b5)
+![Screenshot 2024-02-23 161238](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/2b2248b6-7226-4ea4-b162-e909cbbd58fe)
 
-![out2](https://github.com/hemadec/EXPERIMENT-NO--03-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/124191397/5fbd3a2a-2776-46d9-9bce-b477c941f7bd)
+
 
 ### RESULT:
 Arduino uno analog input functioning is learned and interfaced with digital input switch .
