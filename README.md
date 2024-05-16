@@ -60,6 +60,8 @@ CIRCUIT DIAGRAM
 2.	Connect the board to your computer via the USB cable.
 3.	If needed, install the drivers.
 4.	Launch the Arduino IDE.
+5.	Connect the board to your computer via the USB cable.
+6.	If needed, install the drivers.
 
 
 
