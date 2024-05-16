@@ -61,10 +61,7 @@ CIRCUIT DIAGRAM
 3.	If needed, install the drivers.
 4.	Launch the Arduino IDE.
 5.	Select your board (If you the board is arduino uno, select accordingly).
-6.	Select your serial port, accordingly ( E.g. COM5 )
-7.	Open the file of the program  and verify the error , clear if any errors that are existing 
-8.	Upload the program and check for the physical working. 
-9.	Ensure safety before powering up the device 
+
 
 
 
